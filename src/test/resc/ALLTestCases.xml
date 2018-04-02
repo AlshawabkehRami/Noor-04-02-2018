@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="All Test Cases">
+
+
+    <suite-files>
+        <suite-file path="QA/SafetyAndSecurity/DirectorOfInformationTechnology/UserListDOIT.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/EMISADMIN/UserListEmisadmin.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/GeneralDirectorOfSchoolSecurityAndSafety/FormsGDOSAS.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/GeneralDirectorOfSchoolSecurityAndSafety/MyProfileGDOSSAS.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/GeneralDirectorOfSchoolSecurityAndSafety/TheReportsGDOSSAS.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/GeneralDirectorOfSchoolSecurityAndSafety/TypesOfVisitsGDOSSAS.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/GeneralDirectorOfSchoolSecurityAndSafety/UsersGDOSSAS.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/SafetyAndSecurityInDistrict/UserListSASID.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/SafetyAndSecurityInDistrict/TheReportsSASID.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/SafetyAndSecurityOffice/TheFormSASO.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/SafetyAndSecurityOffice/TheReportsOfficerSASO.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/SchoolAdmin/TheReportSA.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/StaffSAndSInDistrict/SchoolCradsSSASID.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/StaffSAndSInDistrict/TheReportSSASID.xml"/>
+        <suite-file
+                path="QA/TeacherAffairs/DirectorOfTeachersAffairsInTheMinistry/SchoolsAndDepartments/DepartmentsDOTAIM.xml"/>
+        <suite-file
+                path="QA/TeacherAffairs/DirectorOfTeachersAffairsInTheMinistry/Userlist/AddDirectorOfDepartmentsInTheMinistry.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/SchoolSecurityAndSafetyInSchool/TheReport.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/SchoolSecurityAndSafetyInSchool/Forms.xml"/>
+
+
+    </suite-files>
+
+
+</suite>
