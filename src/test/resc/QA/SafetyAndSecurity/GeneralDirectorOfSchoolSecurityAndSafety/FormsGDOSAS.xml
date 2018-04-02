@@ -130,4 +130,18 @@
 
     </test>
 
+    <test name="مدير عام الامن والسلامة حذف الاقسام">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.DeleteSectionsOfTheForm"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+
+    </test>
+
 </suite>
