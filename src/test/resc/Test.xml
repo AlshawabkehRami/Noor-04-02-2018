@@ -5,27 +5,23 @@
   -->
 
 
-
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 
 <suite name="مسؤول الامن والسلامة قي المدرسة">
 
-    <test name="تقرير عدد الطلاب مع ملكية مبنى المدرسة/مدير عام الأمن والسلامة المدرسية">
+    <test name="مدير عام الامن والسلامة أضافة الاقسام">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
                 <methods>
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
-            </class>            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.TheReports.SchoolSecurityAndSafetyReports.StudentsWithOwnershipOfTheSchoolBuilding"/>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.AddSectionsOfTheForm"/>
         </classes>
 
     </test>
-
-<!--
-//jjhkhkhhhkhjhkj
--->
 
 
 </suite>
