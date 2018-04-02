@@ -28,7 +28,7 @@ public class SchoolCardInformation {
     //
 //معلومات بطاقات المدارس
     @Test
-    public void SecurityAndSafetyAssessmentRateReport() {
+    public void SecurityAndSafetyAssessmentRateReport() throws InterruptedException {
 
         browserQA.findElement(SwitchProfileLocator).click();
         browserQA.findElement(UserNameLabelLocator).click();
@@ -44,8 +44,8 @@ public class SchoolCardInformation {
 
         WebElement ddlSupervisionCenterLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSupervisionCenterLocator));
         ddlSupervisionCenterLocatorWait.click();
-        browserQA.findElement(ddlSupervisionCenterSearchLocator).sendKeys("مكتب الخالدية الشمالية" , Keys.ENTER);
-
+        browserQA.findElement(ddlSupervisionCenterSearchLocator).sendKeys("مكتب الخالدية الشمالية", Keys.ENTER);
+        Thread.sleep(1000);
         try {
             WebElement ddlSchoolLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSchoolLocator));
             ddlSchoolLocatorWait.click();
@@ -53,7 +53,7 @@ public class SchoolCardInformation {
             WebElement ddlSchoolLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSchoolLocator));
             ddlSchoolLocatorWait.click();
         }
-        browserQA.findElement(ddlSchoolSearchLocator).sendKeys("مدرسة سعيد بن المسيب التانوية" , Keys.ENTER);
+        browserQA.findElement(ddlSchoolSearchLocator).sendKeys("مدرسة سعيد بن المسيب التانوية", Keys.ENTER);
 
         try {
             WebElement BTNSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocator));
