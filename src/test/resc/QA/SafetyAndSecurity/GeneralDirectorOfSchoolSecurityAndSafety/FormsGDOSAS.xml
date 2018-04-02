@@ -9,7 +9,7 @@
 
 <suite name="نماذج السلامة المدرسية">
 
-    <test name="أضافة نموذج الامن والسلامة">
+    <test name="/مدير عام الامن والسلامة/أضافة نموذج الامن والسلامة">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
@@ -24,7 +24,7 @@
         </classes>
 
     </test>
-    <test name="حذف نموذج الامن والسلامة">
+    <test name="/مدير عام الامن والسلامة/حذف نموذج الامن والسلامة">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
@@ -38,7 +38,7 @@
 
     </test>
 
-    <test name="عرض  الاستمارة/منشور">
+    <test name="/مدير عام الامن والسلامة/عرض  الاستمارة/منشور">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
@@ -50,7 +50,7 @@
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
-    <test name="عرض  الاستمارة/غير منشور">
+    <test name="/مدير عام الامن والسلامة/عرض  الاستمارة/غير منشور">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
@@ -62,7 +62,7 @@
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
-    <test name="عرض اقسام الاستمارة">
+    <test name="/مدير عام الامن والسلامة/عرض اقسام الاستمارة">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
@@ -75,7 +75,7 @@
         </classes>
     </test>
 
-    <test name="عرض اقسام الاستمارة/البنود الخارجية">
+    <test name="/مدير عام الامن والسلامة/عرض اقسام الاستمارة/البنود الخارجية">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
@@ -88,7 +88,7 @@
         </classes>
     </test>
 
-    <test name="عرض اقسام الاستمارة/البنود الخارجية/البنود الداخلية">
+    <test name="/مدير عام الامن والسلامة/عرض اقسام الاستمارة/البنود الخارجية/البنود الداخلية">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
@@ -101,7 +101,7 @@
         </classes>
     </test>
 
-    <test name="تعديل نموذج امن وسلامة غير منشور">
+    <test name="/مدير عام الامن والسلامة/تعديل نموذج امن وسلامة غير منشور">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
@@ -112,6 +112,21 @@
             <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.EditSafetyForms"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
+
+    </test>
+
+    <test name="مدير عام الامن والسلامة/ أضافة الاقسام">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.AddSectionsOfTheForm"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+
 
     </test>
 
