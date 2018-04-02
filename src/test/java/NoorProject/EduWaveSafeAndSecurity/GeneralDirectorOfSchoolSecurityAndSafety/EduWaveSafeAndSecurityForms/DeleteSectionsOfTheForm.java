@@ -13,8 +13,7 @@ import java.util.Random;
 import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.waitQA;
 
-public class AddSectionsOfTheForm {
-
+public class DeleteSectionsOfTheForm {
 
     private By SwitchProfileLocator = By.id("ctl00_oHeader_divSwitchUser");
     private By UserNameLabelLocator = By.linkText("مدير عام الأمن والسلامة المدرسية");
@@ -25,7 +24,7 @@ public class AddSectionsOfTheForm {
 
 
     @Test
-    public void addSectionsToUnpublishedForm() throws InterruptedException {
+    public void deleteSectionsToUnpublishedForm() throws InterruptedException {
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
         SwitchProfileLocatorWait.click();
 
@@ -63,30 +62,29 @@ public class AddSectionsOfTheForm {
             System.out.println("TableSizeAdd::" + TableSizeAdd);
             System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
-            By SectionDescrptionSplit = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_tbAddFormSectionDesc");
-            Random Rand = new Random();
-            int RandomNumber = Rand.nextInt(1000000);
+            By DeleteLinkSplit = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSize + "_lbtnDelete");
 
-            WebElement SectionDescrptionWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescrptionSplit));
+            WebElement DeleteLinkSplitWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLinkSplit));
+            DeleteLinkSplitWait.click();
 
-            SectionDescrptionWait.sendKeys("Rami"+RandomNumber);
+            By YesConfrmationLocator = By.id("ctl00_ibtnYes");
 
-            By AddLinkSpilt=By.id("ctl00_PlaceHolderMain_gvSections_ctl"+TableSizeAddFormat+"_lbtnAddFormSectionDesc");
+            WebElement YesConfrmationLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesConfrmationLocator));
+            YesConfrmationLocatorWait.click();
 
-            WebElement AddLinkWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkSpilt));
-            AddLinkWait.click();
+            By DeleteMessageLocator=By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+
+            WebElement DeleteMessageLocatorWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteMessageLocator));
+
+            String ActualResult=browserQA.findElement(DeleteMessageLocator).getText();
+            String ExcpectedResult="تم حذف القسم بنجاح.";
+
+            Assert.assertEquals(ActualResult,ExcpectedResult,"لم تتم عملية حذف القسم بنجاح");
 
 
-            By AddSectionsMessageLocator=By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
-
-            WebElement AddSectionsMessageLocatorWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddSectionsMessageLocator));
-
-            String ActualResult=browserQA.findElement(AddSectionsMessageLocator).getText();
-            String ExcpectedResult="تم إضافة القسم بنجاح.";
-
-            Assert.assertEquals(ActualResult,ExcpectedResult,"لم تتم عملية اضافة القسم بنجاح");
        // }
 
 
     }
 }
+
