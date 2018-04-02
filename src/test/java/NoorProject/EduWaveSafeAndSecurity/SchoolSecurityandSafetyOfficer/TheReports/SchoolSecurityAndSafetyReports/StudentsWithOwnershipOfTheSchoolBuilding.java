@@ -61,7 +61,7 @@ public class StudentsWithOwnershipOfTheSchoolBuilding {
         }
 
         browserQA.findElement(ddlDistrictSearchLocator).sendKeys("ادارة تعليم الحد الغربي(بنين)", Keys.ENTER);
-
+        Thread.sleep(1000);
         try {
             WebElement ddlSupervisionCenteLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSupervisionCenteLocator));
             ddlSupervisionCenteLocatorWait.click();

@@ -41,7 +41,7 @@ public class Department {
 
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(drop_down_list_level_Locator)).click();
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_field_Locator)).sendKeys("وزار" , Keys.ENTER);
-        Thread.sleep(300);
+        Thread.sleep(1000);
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(btn_search_Locator)).click();
         Random rand = new Random();
         int random_numbers = rand.nextInt();

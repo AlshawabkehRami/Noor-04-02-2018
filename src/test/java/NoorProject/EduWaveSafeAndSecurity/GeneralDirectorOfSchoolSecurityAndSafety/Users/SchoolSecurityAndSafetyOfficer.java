@@ -116,7 +116,7 @@ public class SchoolSecurityAndSafetyOfficer {
         DDlNationalityLocatorWait.click();
 
         WebElement DDlNationalitySearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlNationalitySearchLocator));
-        DDlNationalitySearchLocatorWait.sendKeys("أسبانيا" , Keys.ENTER);
+        DDlNationalitySearchLocatorWait.sendKeys("أسبانيا", Keys.ENTER);
 
         Thread.sleep(1000);
         WebElement PassportNumberLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(PassportNumberLocator));
@@ -146,7 +146,7 @@ public class SchoolSecurityAndSafetyOfficer {
         DdlIdentificationPlaceLocatorWait.click();
 
         WebElement DDLIdentificationPlaceSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLIdentificationPlaceSearchLocator));
-        DDLIdentificationPlaceSearchLocatorWait.sendKeys("الشمال" , Keys.ENTER);
+        DDLIdentificationPlaceSearchLocatorWait.sendKeys("الشمال", Keys.ENTER);
 
         browserQA.findElement(ArabicFirstNameLocator).sendKeys("رامي");
         browserQA.findElement(ArabicSecondNameLocator).sendKeys("أحمد");
@@ -164,7 +164,7 @@ public class SchoolSecurityAndSafetyOfficer {
         GebderDDLLocatorWait.click();
 
         WebElement GebderDDLLSearchocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(GebderDDLLSearchocator));
-        GebderDDLLSearchocatorWait.sendKeys("بنين" , Keys.ENTER);
+        GebderDDLLSearchocatorWait.sendKeys("بنين", Keys.ENTER);
 
         Thread.sleep(1000);
         WebElement BirthDateLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BirthDateLocator));
@@ -177,24 +177,24 @@ public class SchoolSecurityAndSafetyOfficer {
         browserQA.findElement(EnglishBirthPlaceLocator).sendKeys(" مكان الميلاد بالإنجليزية ");
 
         browserQA.findElement(DDlReligionLocator).click();
-        browserQA.findElement(DDlReligionSearchLocator).sendKeys("أخرى" , Keys.ENTER);
+        browserQA.findElement(DDlReligionSearchLocator).sendKeys("أخرى", Keys.ENTER);
 
         browserQA.findElement(DDLBloodTypesLocator).click();
-        browserQA.findElement(DDLBloodTypesSearchLocator).sendKeys("AB+" , Keys.ENTER);
+        browserQA.findElement(DDLBloodTypesSearchLocator).sendKeys("AB+", Keys.ENTER);
 
 
         WebElement DDlResidenceTypeLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlResidenceTypeLocator));
         DDlResidenceTypeLocatorWait.click();
-        browserQA.findElement(DDlResidenceTypeSearchLocator).sendKeys("بيت شعر" , Keys.ENTER);
+        browserQA.findElement(DDlResidenceTypeSearchLocator).sendKeys("بيت شعر", Keys.ENTER);
 
         WebElement DDLResidenceOwnerShipLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLResidenceOwnerShipLocator));
         DDLResidenceOwnerShipLocatorWait.click();
-        browserQA.findElement(DDLResidenceOwnerShipSearchLocator).sendKeys("ملكية بالوقف/بالهبة" , Keys.ENTER);
+        browserQA.findElement(DDLResidenceOwnerShipSearchLocator).sendKeys("ملكية بالوقف/بالهبة", Keys.ENTER);
 
 
         WebElement DDlSocialSituationLOcatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlSocialSituationLOcator));
         DDlSocialSituationLOcatorWait.click();
-        browserQA.findElement(DDlSocialSituationSerachLOcator).sendKeys("مطلق" , Keys.ENTER);
+        browserQA.findElement(DDlSocialSituationSerachLOcator).sendKeys("مطلق", Keys.ENTER);
 
 
         WebElement UserAuthenticationUCLocatrWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UserAuthenticationUCLocatr));
@@ -208,7 +208,7 @@ public class SchoolSecurityAndSafetyOfficer {
 
         String ValidationMeassageUN = browserQA.findElement(UserAuthenticationUClblUserNameVerifyLocator).getText();
         String ValidationMeassageUNString = "تم استخدام اسم الدخول من قبل، الرجاء إدخال اسم جديد.";
-        Assert.assertNotEquals(ValidationMeassageUN , ValidationMeassageUNString , "الرجاء ادخال اسم مستخدم غير مستخدم من قبل  ");
+        Assert.assertNotEquals(ValidationMeassageUN, ValidationMeassageUNString, "الرجاء ادخال اسم مستخدم غير مستخدم من قبل  ");
 
         browserQA.findElement(PasswordLocator).click();
         browserQA.findElement(PasswordLocator).sendKeys("1234");
@@ -217,16 +217,21 @@ public class SchoolSecurityAndSafetyOfficer {
 
         WebElement DDLManagmentRegionLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLManagmentRegionLocator));
         DDLManagmentRegionLocatorWait.click();
-        browserQA.findElement(DDLManagmentRegionSearchLocator).sendKeys("الرياض" , Keys.ENTER);
+        browserQA.findElement(DDLManagmentRegionSearchLocator).sendKeys("الرياض", Keys.ENTER);
 
         Thread.sleep(1000);
         WebElement DDlCityLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlCityLocator));
         DDlCityLocatorWait.click();
-        browserQA.findElement(DDlCitySearchLocator).sendKeys("محافظة الرياض 1" , Keys.ENTER);
+        browserQA.findElement(DDlCitySearchLocator).sendKeys("محافظة الرياض 1", Keys.ENTER);
         Thread.sleep(1000);
-        WebElement DDlRegionLOcatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlRegionLOcator));
-        DDlRegionLOcatorWait.click();
-        browserQA.findElement(DDlRegionSearchLOcator).sendKeys("مركز الرياض 1" , Keys.ENTER);
+        try {
+            WebElement DDlRegionLOcatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlRegionLOcator));
+            DDlRegionLOcatorWait.click();
+        } catch (Exception e) {
+            WebElement DDlRegionLOcatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlRegionLOcator));
+            DDlRegionLOcatorWait.click();
+        }
+        browserQA.findElement(DDlRegionSearchLOcator).sendKeys("مركز الرياض 1", Keys.ENTER);
         browserQA.findElement(MainStreetLocator).sendKeys(" الشارع الرئيسي ");
         browserQA.findElement(SubStreetLOcator).sendKeys(" الشارع الفرعي ");
         browserQA.findElement(HouseNoLocator).sendKeys("123");
