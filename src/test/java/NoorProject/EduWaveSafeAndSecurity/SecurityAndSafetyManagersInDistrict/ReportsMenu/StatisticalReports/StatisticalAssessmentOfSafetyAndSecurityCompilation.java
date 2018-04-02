@@ -52,7 +52,7 @@ public class StatisticalAssessmentOfSafetyAndSecurityCompilation {
         drop_down_2_Locator_wait.click();
         WebElement txt_field_2_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_field_2_Locator));
         txt_field_2_Locator_wait.sendKeys("abdullah" , Keys.ENTER);
-        Thread.sleep(300);
+        Thread.sleep(1000);
         WebElement btn_search_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(btn_search_Locator));
         btn_search_Locator_wait.click();
 
