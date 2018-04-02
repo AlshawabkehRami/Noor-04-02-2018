@@ -38,7 +38,7 @@ public class StudentsWithOwnershipOfTheSchoolBuilding {
 
     ///عدد الطلاب مع ملكية مبنى المدرسة
     @Test
-    public void StudentsWithOwnershipOfTheSchoolBuildingReport() {
+    public void StudentsWithOwnershipOfTheSchoolBuildingReport() throws InterruptedException {
         browserQA.findElement(SwitchProfileLocator).click();
         browserQA.findElement(UserNameLabelLocator).click();
         browserQA.findElement(ReportsMainMenuLocator).click();
@@ -49,9 +49,9 @@ public class StudentsWithOwnershipOfTheSchoolBuilding {
 
         WebElement GenderLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(GenderLocator));
         GenderLocatorWait.click();
-        browserQA.findElement(Femalelocator).sendKeys("بنين" , Keys.ENTER);
+        browserQA.findElement(Femalelocator).sendKeys("بنين", Keys.ENTER);
 
-
+        Thread.sleep(1000);
         try {
             WebElement ddlDistrictLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlDistrictLocator));
             ddlDistrictLocatorWait.click();
@@ -60,7 +60,7 @@ public class StudentsWithOwnershipOfTheSchoolBuilding {
             ddlDistrictLocatorWait.click();
         }
 
-        browserQA.findElement(ddlDistrictSearchLocator).sendKeys("ادارة تعليم الحد الغربي(بنين)" , Keys.ENTER);
+        browserQA.findElement(ddlDistrictSearchLocator).sendKeys("ادارة تعليم الحد الغربي(بنين)", Keys.ENTER);
 
         try {
             WebElement ddlSupervisionCenteLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSupervisionCenteLocator));
@@ -70,7 +70,7 @@ public class StudentsWithOwnershipOfTheSchoolBuilding {
             ddlSupervisionCenteLocatorWait.click();
         }
 
-        browserQA.findElement(ddlSupervisionCenteSearchLocator).sendKeys("مكتب الخالدية الشمالية" , Keys.ENTER);
+        browserQA.findElement(ddlSupervisionCenteSearchLocator).sendKeys("مكتب الخالدية الشمالية", Keys.ENTER);
 
         try {
             WebElement ibtnSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ibtnSearchLocator));
@@ -86,7 +86,7 @@ public class StudentsWithOwnershipOfTheSchoolBuilding {
         String ReportTitleInsidLoactorElement = browserQA.findElement(ReportTitleInsidLoactor).getText();
         String ReportTitleInsidString = " عدد الطلاب مع ملكية مبنى المدرسة";
 
-        Assert.assertEquals(ReportTitleInsidLoactorElement , ReportTitleInsidString , "لايمكن عرض التقرير المطلوب");
+        Assert.assertEquals(ReportTitleInsidLoactorElement, ReportTitleInsidString, "لايمكن عرض التقرير المطلوب");
 
     }
 }

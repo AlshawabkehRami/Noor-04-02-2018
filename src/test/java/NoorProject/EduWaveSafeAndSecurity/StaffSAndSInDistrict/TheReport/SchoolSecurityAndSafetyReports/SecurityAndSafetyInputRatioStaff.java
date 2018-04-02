@@ -43,17 +43,22 @@ public class SecurityAndSafetyInputRatioStaff {
 
         WebElement DDlFormNameLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlFormNameLocator));
         DDlFormNameLocatorWait.click();
-        browserQA.findElement(DDlFormNameSearchLocator).sendKeys("Raad Sbaih94" , Keys.ENTER);
+        browserQA.findElement(DDlFormNameSearchLocator).sendKeys("Raad Sbaih94", Keys.ENTER);
 
-        WebElement SearchButtonLOcatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchButtonLOcator));
-        SearchButtonLOcatorWait.click();
+        try {
+            WebElement SearchButtonLOcatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchButtonLOcator));
+            SearchButtonLOcatorWait.click();
+        } catch (Exception e) {
 
+            WebElement SearchButtonLOcatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchButtonLOcator));
+            SearchButtonLOcatorWait.click();
+        }
         By ReportTitleLoactor = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div/div[7]/div/span/div/table/tbody/tr[4]/td[3]/div/div[1]/div/table/tbody/tr/td/table/tbody/tr[1]/td/table/tbody/tr/td/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/table/tbody/tr[8]/td[3]/table/tbody/tr/td/div/div/span");
         WebElement ReportTitleLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportTitleLoactor));
         String ReportName = browserQA.findElement(ReportTitleLoactor).getText();
         String NameOfTheReport = "الأمن والسلامة-نسب الإدخال على مستوى الإدارة";
 
-        Assert.assertEquals(ReportName , NameOfTheReport , "التقرير المطلوب غير متوفر");
+        Assert.assertEquals(ReportName, NameOfTheReport, "التقرير المطلوب غير متوفر");
 
     }
 }
