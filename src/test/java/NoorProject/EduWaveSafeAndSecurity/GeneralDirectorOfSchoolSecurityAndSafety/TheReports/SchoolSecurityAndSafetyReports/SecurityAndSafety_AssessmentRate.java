@@ -59,7 +59,7 @@ public class SecurityAndSafety_AssessmentRate {
     //التقارير_تقارير الامن والسلامة المدرسية
     //الأمن والسلامة-نسب التقييم على مستوى الوزارة
     @Test
-    public void SecurityAndSafety_AssessmentRateReport() {
+    public void SecurityAndSafety_AssessmentRateReport() throws InterruptedException {
 
 
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
@@ -84,6 +84,7 @@ public class SecurityAndSafety_AssessmentRate {
         WebElement GenderSearchLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(GenderSearchLoactor));
         GenderSearchLoactorWait.sendKeys("بنين" , Keys.ENTER);
 
+        Thread.sleep(1000);
         try {
             WebElement FormNameLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormNameLoactor));
             FormNameLoactorWait.click();

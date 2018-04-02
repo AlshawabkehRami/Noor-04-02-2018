@@ -220,8 +220,13 @@ public class SchoolSecurityAndSafetyOfficer {
         browserQA.findElement(DDLManagmentRegionSearchLocator).sendKeys("الرياض", Keys.ENTER);
 
         Thread.sleep(1000);
-        WebElement DDlCityLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlCityLocator));
-        DDlCityLocatorWait.click();
+        try {
+            WebElement DDlCityLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlCityLocator));
+            DDlCityLocatorWait.click();
+        } catch (Exception e) {
+            WebElement DDlCityLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlCityLocator));
+            DDlCityLocatorWait.click();
+        }
         browserQA.findElement(DDlCitySearchLocator).sendKeys("محافظة الرياض 1", Keys.ENTER);
         Thread.sleep(1000);
         try {
