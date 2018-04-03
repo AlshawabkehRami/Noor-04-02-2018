@@ -46,7 +46,7 @@ public class AddSectionsOfTheForm {
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
 
-      /*  browserQA.findElement(By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container")).click();
+  /*      browserQA.findElement(By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container")).click();
         browserQA.findElement(By.xpath("/html/body/span/span/span[1]/input")).sendKeys("Rami200103" , Keys.ENTER);
 
 
