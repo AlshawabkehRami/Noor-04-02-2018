@@ -10,7 +10,7 @@
 
 <suite name="مسؤول الامن والسلامة قي المدرسة">
 
-    <test name="مدير عام الامن والسلامة حذف الاقسام">
+    <test name="مدير عام الامن والسلامةنشر نماذج الامن والسلامة">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
