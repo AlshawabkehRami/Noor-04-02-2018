@@ -42,15 +42,15 @@ public class AddSectionsOfTheForm {
     @Test
     public void addSectionsToUnpublishedForm() throws InterruptedException {
 
-        // for (int i = 0; i < 3; i++) {
+     //  for (int i = 0; i < 22; i++) {
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
 
-  /*      browserQA.findElement(By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container")).click();
+        browserQA.findElement(By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container")).click();
         browserQA.findElement(By.xpath("/html/body/span/span/span[1]/input")).sendKeys("Rami200103" , Keys.ENTER);
 
 
-        Thread.sleep(1000);*/
+        Thread.sleep(1000);
 
         WebElement FormStatusLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
         FormStatusLocatorWait.click();
@@ -65,6 +65,7 @@ public class AddSectionsOfTheForm {
 
         WebElement SectionsLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionsLinkLocator));
         SectionsLinkLocatorWait.click();
+
 
         List SectionTableList = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
 
@@ -102,7 +103,8 @@ public class AddSectionsOfTheForm {
             String ExcpectedResult = "تم إضافة القسم بنجاح.";
 
             Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية اضافة القسم بنجاح");
-        } else {
+        }
+       if (TableSize>1&&TableSize<22){
 
             int TableSizeAdd = SectionTableList.size() + 1;
             String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
@@ -131,8 +133,39 @@ public class AddSectionsOfTheForm {
             String ExcpectedResult = "تم إضافة القسم بنجاح.";
 
             Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية اضافة القسم بنجاح");
-        }
-        // }
+
+       }
+       else {
+
+           int TableSizeAdd = SectionTableList.size();
+           String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
+           System.out.println("TableSizeAdd::" + TableSizeAdd);
+           System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
+
+           By SectionDescrptionSplit = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_tbAddFormSectionDesc");
+           Random Rand = new Random();
+           int RandomNumber = Rand.nextInt(1000000);
+
+           WebElement SectionDescrptionWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescrptionSplit));
+
+           SectionDescrptionWait.sendKeys("Rami" + RandomNumber);
+
+           By AddLinkSpilt = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_lbtnAddFormSectionDesc");
+
+           WebElement AddLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkSpilt));
+           AddLinkWait.click();
+
+
+           By AddSectionsMessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+
+           WebElement AddSectionsMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddSectionsMessageLocator));
+
+           String ActualResult = browserQA.findElement(AddSectionsMessageLocator).getText();
+           String ExcpectedResult = "تم إضافة القسم بنجاح.";
+
+           Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية اضافة القسم بنجاح");
+       }
+      //  }
 
 
     }
