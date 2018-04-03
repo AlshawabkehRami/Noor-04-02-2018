@@ -200,16 +200,10 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.ExternalItems.ExternalItems.AddExternalItems">
-                <methods>
-                    <include name="goToTheUser"/>
-                    <include name="addExternalItems"/>
-                </methods>
-            </class>
-            <class name="NoorProject.Other.NoorLogOut"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.ExternalItems.AddExternalItems"/>
+
         </classes>
 
     </test>
-
 
 </suite>

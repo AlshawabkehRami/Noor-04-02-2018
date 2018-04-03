@@ -11,7 +11,7 @@
 <suite name="مسؤول الامن والسلامة قي المدرسة">
 
 
-    <test name="مدير عام الامن والسلامة حذف الاقسام">
+    <test name="مدير عام الامن والسلامة أضافة البنود الخارجية">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
@@ -19,7 +19,8 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.SectionsForm.DeleteSectionsOfTheForm"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.ExternalItems.AddExternalItems"/>
+
         </classes>
 
     </test>
