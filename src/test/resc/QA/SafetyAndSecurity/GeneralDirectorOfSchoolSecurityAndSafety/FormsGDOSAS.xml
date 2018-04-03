@@ -123,10 +123,14 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.AddSectionsOfTheForm"/>
-            <class name="NoorProject.Other.NoorLogOut"/>
-        </classes>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.AddSectionsOfTheForm">
+                <methods>
+                    <include name="goToUser"/>
+                    <include name="addSectionsToUnpublishedForm"/>
+                </methods>
+            </class>
 
+        </classes>
 
     </test>
 
@@ -144,7 +148,7 @@
 
     </test>
 
-    <test name="مدير عام الامن والسلامةنشر نماذج الامن والسلامة">
+    <test name="مدير عام الامن والسلامة نشر نماذج الامن والسلامة">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
@@ -157,5 +161,36 @@
         </classes>
 
     </test>
+
+    <test name="مدير عام الامن والسلامة الغاء نشر نماذج الامن والسلامة">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.UnPublishingSchoolSafetyForm"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+
+        </classes>
+
+    </test>
+
+    <test name="مدير عام الامن والسلامة تعديل الاقسام">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.EditSectionsOfTheForm"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+
+        </classes>
+
+    </test>
+
 
 </suite>
