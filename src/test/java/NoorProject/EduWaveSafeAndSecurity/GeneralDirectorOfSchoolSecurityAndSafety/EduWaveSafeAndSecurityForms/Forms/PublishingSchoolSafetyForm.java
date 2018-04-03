@@ -1,8 +1,12 @@
 /*
- * Created By Rami Al Shawabkeh 4/3/18 9:43 AM
+ * Created By Rami Al Shawabkeh 4/3/18 11:36 AM
  */
 
-package NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms;
+/*
+ * Created By Rami Al Shawabkeh 4/3/18 9:17 AM
+ */
+
+package NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.Forms;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -14,7 +18,8 @@ import org.testng.annotations.Test;
 import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.waitQA;
 
-public class UnPublishingSchoolSafetyForm {
+public class PublishingSchoolSafetyForm {
+
 
     private By SwitchProfileLocator = By.id("ctl00_oHeader_divSwitchUser");
     private By UserNameLabelLocator = By.linkText("مدير عام الأمن والسلامة المدرسية");
@@ -22,12 +27,12 @@ public class UnPublishingSchoolSafetyForm {
     private By FormStatusLocator = By.id("select2-ctl00_PlaceHolderMain_ddlFormStatus-container");
     private By FormStatusSearchLocator = By.xpath("/html/body/span/span/span[1]/input");
     private By SerachButtonLocator = By.id("ctl00_PlaceHolderMain_ibtnSearch");
-    private By UnPublishingLinkLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl02_lbtnUnPublish");
+    private By PublishingLinkLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl02_lbtnPublish");
     private By YesConfrmationLocator = By.id("ctl00_ibtnYes");
 
 
     @Test
-    public void unPublishingForm() throws InterruptedException {
+    public void PublishingForm() throws InterruptedException {
 
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
         SwitchProfileLocatorWait.click();
@@ -37,20 +42,20 @@ public class UnPublishingSchoolSafetyForm {
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
-       // for (int i = 0; i < 3; i++) {
+        //for (int i = 0; i < 3; i++) {
 
             WebElement FormStatusLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
             FormStatusLocatorWait.click();
 
             WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
-            FormStatusSearchLocatorWait.sendKeys("منشور" , Keys.ENTER);
+            FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
 
             Thread.sleep(1000);
             WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
             SerachButtonLocatorWait.click();
 
 
-            WebElement PublishingLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UnPublishingLinkLocator));
+            WebElement PublishingLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(PublishingLinkLocator));
             PublishingLinkLocatorWait.click();
 
 
@@ -62,11 +67,10 @@ public class UnPublishingSchoolSafetyForm {
             WebElement MessageLocatorWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(MessageLocator));
 
             String ActualResult=browserQA.findElement(MessageLocator).getText();
-            String ExcpectedResult="تم إلغاء النشر النموذج بنجاح.";
+            String ExcpectedResult="تم نشر النموذج بنجاح.";
 
-            Assert.assertEquals(ActualResult,ExcpectedResult,"لم تتم عملية الغاء النشر للنموذج");
-       // }
+            Assert.assertEquals(ActualResult,ExcpectedResult,"يجب اضافة الاقسام والبنود الخارجية والبنود الداخلية");
+        //}
 
     }
 }
-

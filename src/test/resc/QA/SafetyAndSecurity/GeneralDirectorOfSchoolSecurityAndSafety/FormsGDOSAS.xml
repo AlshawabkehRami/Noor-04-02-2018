@@ -17,7 +17,7 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.ADDSafetyForms"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.Forms.ADDSafetyForms"/>
             <class name="NoorProject.Other.NoorLogOut"/>
 
 
@@ -32,7 +32,7 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.DeleteSafetyForms"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.Forms.DeleteSafetyForms"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 
@@ -46,7 +46,7 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.ViewTheFormPublished"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.Forms.ViewTheFormPublished"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -58,7 +58,7 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.ViewTheFormUnPublished"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.Forms.ViewTheFormUnPublished"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -70,7 +70,7 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.ViewSectionsOfTheForm"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.SectionsForm.ViewSectionsOfTheForm"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -83,7 +83,7 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.ExternalItems"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.ExternalItems.ExternalItems"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -96,7 +96,7 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.InternalItems"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.InternalItems.InternalItems"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -109,7 +109,7 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.EditSafetyForms"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.Forms.EditSafetyForms"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 
@@ -123,7 +123,7 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.AddSectionsOfTheForm">
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.SectionsForm.AddSectionsOfTheForm">
                 <methods>
                     <include name="goToUser"/>
                     <include name="addSectionsToUnpublishedForm"/>
@@ -142,7 +142,7 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.DeleteSectionsOfTheForm"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.SectionsForm.DeleteSectionsOfTheForm"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 
@@ -156,7 +156,7 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.PublishingSchoolSafetyForm"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.Forms.PublishingSchoolSafetyForm"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 
@@ -170,7 +170,7 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.UnPublishingSchoolSafetyForm"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.Forms.UnPublishingSchoolSafetyForm"/>
             <class name="NoorProject.Other.NoorLogOut"/>
 
         </classes>
@@ -185,9 +185,28 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.EditSectionsOfTheForm"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.SectionsForm.EditSectionsOfTheForm"/>
             <class name="NoorProject.Other.NoorLogOut"/>
 
+        </classes>
+
+    </test>
+
+    <test name="مدير عام الامن والسلامة أضافة البنود الخارجية">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.ExternalItems.ExternalItems.AddExternalItems">
+                <methods>
+                    <include name="goToTheUser"/>
+                    <include name="addExternalItems"/>
+                </methods>
+            </class>
+            <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 
     </test>

@@ -1,11 +1,14 @@
-package NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms;
+/*
+ * Created By Rami Al Shawabkeh 4/3/18 11:34 AM
+ */
+
+package NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.SectionsForm;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -23,6 +26,7 @@ public class AddSectionsOfTheForm {
     private By FormStatusLocator = By.id("select2-ctl00_PlaceHolderMain_ddlFormStatus-container");
     private By FormStatusSearchLocator = By.xpath("/html/body/span/span/span[1]/input");
     private By SerachButtonLocator = By.id("ctl00_PlaceHolderMain_ibtnSearch");
+    private By SectionsLinkLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl02_tdSections");
 
 
     @Test
@@ -38,7 +42,6 @@ public class AddSectionsOfTheForm {
     @Test
     public void addSectionsToUnpublishedForm() throws InterruptedException {
 
-        Thread.sleep(1000);
         // for (int i = 0; i < 3; i++) {
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
@@ -54,7 +57,6 @@ public class AddSectionsOfTheForm {
         WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
         SerachButtonLocatorWait.click();
 
-        By SectionsLinkLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl02_tdSections");
 
         WebElement SectionsLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionsLinkLocator));
         SectionsLinkLocatorWait.click();
@@ -66,9 +68,9 @@ public class AddSectionsOfTheForm {
         String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
 
 
-        System.out.println("TableSize::" + TableSize);
-        System.out.println("TableSizeAdd::" + TableSizeAdd);
-        System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
+       // System.out.println("TableSize::" + TableSize);
+      //  System.out.println("TableSizeAdd::" + TableSizeAdd);
+       // System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
         By SectionDescrptionSplit = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_tbAddFormSectionDesc");
         Random Rand = new Random();

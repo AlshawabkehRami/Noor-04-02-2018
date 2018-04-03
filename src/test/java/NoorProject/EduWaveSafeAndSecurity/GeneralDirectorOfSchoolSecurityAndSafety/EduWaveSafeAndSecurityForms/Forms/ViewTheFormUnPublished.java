@@ -1,20 +1,24 @@
 /*
- * Created By Rami AlShawabkeh 3/29/18 10:08 AM
+ * Created By Rami Al Shawabkeh 4/3/18 11:36 AM
  */
 
-package NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms;
+/*
+ * Created By Rami AlShawabkeh 3/29/18 12:37 PM
+ */
+
+package NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.Forms;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
-import sun.net.ExtendedOptionsImpl;
 
 import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.waitQA;
 
-public class ViewTheFormPublished {
+public class ViewTheFormUnPublished {
+
 
     private By SwitchProfileLocator = By.id("ctl00_oHeader_divSwitchUser");
     private By UserNameLabelLocator = By.linkText("مدير عام الأمن والسلامة المدرسية");
@@ -43,7 +47,7 @@ public class ViewTheFormPublished {
         DDLFormStatusLoactorWait.click();
 
         WebElement TextFormStatusSearchLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(TextFormStatusSearchLoactor));
-        TextFormStatusSearchLoactorWait.sendKeys("منشور" , Keys.ENTER);
+        TextFormStatusSearchLoactorWait.sendKeys("غير منشور" , Keys.ENTER);
 
 
         Thread.sleep(1000);
