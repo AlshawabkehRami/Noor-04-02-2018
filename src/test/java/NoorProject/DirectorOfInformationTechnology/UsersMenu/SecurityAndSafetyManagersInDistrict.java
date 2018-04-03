@@ -194,6 +194,7 @@ public class SecurityAndSafetyManagersInDistrict {
         UserAuthenticationUCLocatrWait.clear();
         //browserQA.findElement(UserAuthenticationUCLocatr).sendKeys("rami005");
         UserAuthenticationUCLocatrWait.sendKeys("Rami" + RandomNumber);
+        Thread.sleep(1000);
         WebElement UserAuthenticationUC_ibtnGoLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UserAuthenticationUC_ibtnGoLocator));
         UserAuthenticationUC_ibtnGoLocatorWait.click();
 
