@@ -28,7 +28,7 @@ public class DeleteSectionsOfTheForm {
     private By DeleteLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnDelete");
     private By YesConfrmationLocator = By.id("ctl00_ibtnYes");
 
-
+//مدير عام الامن والسلامة حذف الاقسام
     @Test
 
     public void deleteSections() throws InterruptedException {

@@ -28,7 +28,7 @@ public class AddSectionsOfTheForm {
     private By SerachButtonLocator = By.id("ctl00_PlaceHolderMain_ibtnSearch");
     private By SectionsLinkLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl02_tdSections");
 
-
+//مدير عام الامن والسلامة/ أضافة الاقسام
     @Test
     public void addSectionsToUnpublishedForm() throws InterruptedException {
 

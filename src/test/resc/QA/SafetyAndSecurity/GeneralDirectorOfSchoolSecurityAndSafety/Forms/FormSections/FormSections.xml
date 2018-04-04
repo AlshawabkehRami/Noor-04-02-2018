@@ -24,6 +24,36 @@
 
     </test>
 
+    <test name="مدير عام الامن والسلامة/ عرض الاقسام الاقسام">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.SectionsForm.ViewSectionsOfTheForm"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+
+
+        </classes>
+
+    </test>
+    <test name="مدير عام الامن والسلامة/ تعديل الاقسام الاقسام">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.SectionsForm.EditSectionsOfTheForm"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+
+
+        </classes>
+
+    </test>
     <test name="مدير عام الامن والسلامة حذف الاقسام">
 
         <classes>

@@ -31,7 +31,7 @@ public class EditSectionsOfTheForm {
     private By EditLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnEdit");
     private By SaveLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnUpdate");
 
-
+//مدير عام الامن والسلامة/ تعديل الاقسام الاقسام
     @Test
     public void editSectionsOfTheForm() throws InterruptedException {
 
@@ -59,10 +59,6 @@ public class EditSectionsOfTheForm {
 
         WebElement SectionsLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionsLinkLocator));
         SectionsLinkLocatorWait.click();
-
-        AddSectionsOfTheForm Add = new AddSectionsOfTheForm();
-        Add.addSectionsToUnpublishedForm();
-
 
         WebElement EditLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(EditLinkLocator));
         EditLinkLocatorWait.click();

@@ -25,7 +25,7 @@ public class ViewSectionsOfTheForm {
     private By BTNSectionsLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl02_lbtnSections");
     private By BTNBack = By.id("ctl00_PlaceHolderMain_ibtnBack");
 
-
+//مدير عام الامن والسلامة/ عرض الاقسام الاقسام
     @Test
     public void ViewSectionsOfTheForms() throws InterruptedException {
 
