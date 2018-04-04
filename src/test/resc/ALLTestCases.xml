@@ -10,7 +10,6 @@
     <suite-files>
         <suite-file path="QA/SafetyAndSecurity/DirectorOfInformationTechnology/UserListDOIT.xml"/>
         <suite-file path="QA/SafetyAndSecurity/EMISADMIN/UserListEmisadmin.xml"/>
-        <suite-file path="QA/SafetyAndSecurity/GeneralDirectorOfSchoolSecurityAndSafety/FormsGDOSAS.xml"/>
         <suite-file path="QA/SafetyAndSecurity/GeneralDirectorOfSchoolSecurityAndSafety/MyProfileGDOSSAS.xml"/>
         <suite-file path="QA/SafetyAndSecurity/GeneralDirectorOfSchoolSecurityAndSafety/TheReportsGDOSSAS.xml"/>
         <suite-file path="QA/SafetyAndSecurity/GeneralDirectorOfSchoolSecurityAndSafety/TypesOfVisitsGDOSSAS.xml"/>
