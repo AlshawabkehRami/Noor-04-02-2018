@@ -39,6 +39,8 @@ public class Department {
         WebElement DeptsLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeptsLoactor));
         DeptsLoactorWait.click();
 
+        Thread.sleep(1000);
+
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(drop_down_list_level_Locator)).click();
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_field_Locator)).sendKeys("وزار" , Keys.ENTER);
         Thread.sleep(1000);

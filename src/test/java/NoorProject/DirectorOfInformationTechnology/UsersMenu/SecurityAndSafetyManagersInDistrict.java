@@ -160,8 +160,14 @@ public class SecurityAndSafetyManagersInDistrict {
         GebderDDLLSearchocatorWait.sendKeys("بنات" , Keys.ENTER);
 
         Thread.sleep(1000);
-        WebElement BirthDateLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BirthDateLocator));
-        BirthDateLocatorWait.click();
+        try {
+            WebElement BirthDateLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BirthDateLocator));
+            BirthDateLocatorWait.click();
+        }
+        catch (Exception e){
+            WebElement BirthDateLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BirthDateLocator));
+            BirthDateLocatorWait.click();
+        }
         WebElement BirthDateLocatorDateWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BirthDateLocatorDate));
         BirthDateLocatorDateWait.click();
 

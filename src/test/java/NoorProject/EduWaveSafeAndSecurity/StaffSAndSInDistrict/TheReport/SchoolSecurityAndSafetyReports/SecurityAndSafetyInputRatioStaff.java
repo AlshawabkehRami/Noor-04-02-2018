@@ -43,7 +43,7 @@ public class SecurityAndSafetyInputRatioStaff {
 
         WebElement DDlFormNameLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlFormNameLocator));
         DDlFormNameLocatorWait.click();
-        browserQA.findElement(DDlFormNameSearchLocator).sendKeys("Raad Sbaih94", Keys.ENTER);
+        browserQA.findElement(DDlFormNameSearchLocator).sendKeys("SeleniumTestDon'tDelete", Keys.ENTER);
 
         try {
             WebElement SearchButtonLOcatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchButtonLOcator));

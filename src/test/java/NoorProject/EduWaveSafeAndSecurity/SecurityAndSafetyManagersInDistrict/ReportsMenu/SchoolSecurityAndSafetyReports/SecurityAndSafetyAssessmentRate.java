@@ -45,7 +45,7 @@ public class SecurityAndSafetyAssessmentRate {
         browserQA.findElement(ReportLinkLocator).click();
         WebElement DDLFormNameLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLFormNameLocator));
         DDLFormNameLocatorWait.click();
-        browserQA.findElement(DDLFormNameSrearchLocator).sendKeys("Raad Sbaih94" , Keys.ENTER);
+        browserQA.findElement(DDLFormNameSrearchLocator).sendKeys("SeleniumTestDon'tDelete" , Keys.ENTER);
 
         try {
             WebElement SearchButtonLOcatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchButtonLOcator));
