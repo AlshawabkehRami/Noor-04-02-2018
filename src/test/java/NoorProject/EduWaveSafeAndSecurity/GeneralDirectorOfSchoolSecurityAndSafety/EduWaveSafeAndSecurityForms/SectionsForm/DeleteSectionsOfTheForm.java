@@ -4,48 +4,88 @@
 
 package NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.SectionsForm;
 
-import NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.SectionsForm.AddSectionsOfTheForm;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.waitQA;
 
 public class DeleteSectionsOfTheForm {
 
+
+    private By SwitchProfileLocator = By.id("ctl00_oHeader_divSwitchUser");
+    private By UserNameLabelLocator = By.linkText("مدير عام الأمن والسلامة المدرسية");
+    private By FormMainMenuLoactor = By.id("divMenuItem_5968");
+    private By FormStatusLocator = By.id("select2-ctl00_PlaceHolderMain_ddlFormStatus-container");
+    private By FormStatusSearchLocator = By.xpath("/html/body/span/span/span[1]/input");
+    private By SerachButtonLocator = By.id("ctl00_PlaceHolderMain_ibtnSearch");
+    private By SectionsLinkLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl02_tdSections");
+    private By DeleteLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnDelete");
+    private By YesConfrmationLocator = By.id("ctl00_ibtnYes");
+
+
     @Test
-    public void deleteSectionsToUnpublishedForm() throws InterruptedException {
+
+    public void deleteSections() throws InterruptedException {
 
 
-        AddSectionsOfTheForm Add=new AddSectionsOfTheForm();
-        Add.goToUser();
-        Add.addSectionsToUnpublishedForm();
+        WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
+        SwitchProfileLocatorWait.click();
 
-        By DeleteSectionLocator=By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnDelete");
+        WebElement UserLabelLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UserNameLabelLocator));
+        UserLabelLocatorWait.click();
+        for (int i = 0; i < 20; i++) {
+            WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
+            FormMainMenuLoactorWait.click();
 
-        WebElement DeleteSectionLocatorWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteSectionLocator));
-        DeleteSectionLocatorWait.click();
-
-        By YesConfrmationLocator = By.id("ctl00_ibtnYes");
-
-        WebElement YesConfrmationLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesConfrmationLocator));
-        YesConfrmationLocatorWait.click();
-
-        By DeleteMessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
-
-        WebElement DeleteMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteMessageLocator));
-
-        String ActualResult = browserQA.findElement(DeleteMessageLocator).getText();
-        String ExcpectedResult = "تم حذف القسم بنجاح.";
-
-        Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية حذف القسم بنجاح");
+   /*         browserQA.findElement(By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container")).click();
+            browserQA.findElement(By.xpath("/html/body/span/span/span[1]/input")).sendKeys("Rami200103" , Keys.ENTER);
 
 
-        // }
+            Thread.sleep(1000);*/
+
+            WebElement FormStatusLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
+            FormStatusLocatorWait.click();
+
+            WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
+            FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
+
+            Thread.sleep(1000);
+            WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
+            SerachButtonLocatorWait.click();
+
+
+            WebElement SectionsLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionsLinkLocator));
+            SectionsLinkLocatorWait.click();
+
+
+            WebElement DeleteLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLinkLocator));
+            DeleteLinkLocatorWait.click();
+
+            WebElement YesConfrmationLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesConfrmationLocator));
+            YesConfrmationLocatorWait.click();
+
+            By MessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+
+            WebElement MessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(MessageLocator));
+
+            String ActualResult = browserQA.findElement(MessageLocator).getText();
+            String ExpectedResult = "تم حذف القسم بنجاح.";
+
+            Assert.assertEquals(ActualResult , ExpectedResult , "لايمكن الحذف للقسم");
+
+
+        }
 
 
     }
+
+
 }
+
 

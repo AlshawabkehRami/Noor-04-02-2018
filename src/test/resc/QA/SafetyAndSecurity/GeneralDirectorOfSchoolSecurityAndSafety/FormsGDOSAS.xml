@@ -123,12 +123,9 @@
                     <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.SectionsForm.AddSectionsOfTheForm">
-                <methods>
-                    <include name="goToUser"/>
-                    <include name="addSectionsToUnpublishedForm"/>
-                </methods>
-            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.SectionsForm.AddSectionsOfTheForm"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+
 
         </classes>
 

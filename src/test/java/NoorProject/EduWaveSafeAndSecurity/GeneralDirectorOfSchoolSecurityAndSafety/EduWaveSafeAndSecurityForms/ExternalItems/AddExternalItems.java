@@ -11,6 +11,7 @@ package NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSaf
 import NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.SectionsForm.AddSectionsOfTheForm;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -23,20 +24,17 @@ import static NoorProject.Other.NoorLogin.waitQA;
 
 public class AddExternalItems {
 
-    private By ExternalLikLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnItems");
-
 
     @Test
 
     public void addExternalItems() throws InterruptedException {
 
-        AddSectionsOfTheForm AddSection = new AddSectionsOfTheForm();
-        AddSection.goToUser();
-        AddSection.addSectionsToUnpublishedForm();
 
-        Thread.sleep(2000);
-        WebElement ExternalLiksLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalLikLocator));
-        ExternalLiksLocatorWait.click();
+
+        By ExternalLikLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnItems");
+
+        browserQA.findElement(ExternalLikLocator).click();
+
 
 
         // for (int i = 0; i < 20; i++) {
