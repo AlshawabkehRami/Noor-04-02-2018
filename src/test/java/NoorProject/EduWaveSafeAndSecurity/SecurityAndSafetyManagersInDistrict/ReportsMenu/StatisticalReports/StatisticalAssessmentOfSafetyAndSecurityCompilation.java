@@ -46,22 +46,26 @@ public class StatisticalAssessmentOfSafetyAndSecurityCompilation {
         WebElement drop_down_1_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(drop_down_l_Locator));
         drop_down_1_Locator_wait.click();
         WebElement txt_field_1_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_field_1_Locator));
-        txt_field_1_Locator_wait.sendKeys("مكتب الخالدية الشمالية" , Keys.ENTER);
+        txt_field_1_Locator_wait.sendKeys("مكتب الخالدية الشمالية", Keys.ENTER);
         Thread.sleep(300);
         WebElement drop_down_2_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(drop_down_2_Locator));
         drop_down_2_Locator_wait.click();
         WebElement txt_field_2_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_field_2_Locator));
-        txt_field_2_Locator_wait.sendKeys("abdullah" , Keys.ENTER);
-        Thread.sleep(1000);
-        WebElement btn_search_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(btn_search_Locator));
-        btn_search_Locator_wait.click();
+        txt_field_2_Locator_wait.sendKeys("abdullah", Keys.ENTER);
 
+        try {
+            WebElement btn_search_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(btn_search_Locator));
+            btn_search_Locator_wait.click();
+        } catch (Exception e) {
+            WebElement btn_search_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(btn_search_Locator));
+            btn_search_Locator_wait.click();
+        }
         String expected_result = "إحصائي عن تقييم الأمن والسلامة - تجميعي";
         By actual_result = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[5]/div/span/div/table/tbody/tr[4]/td[3]/div/div[1]/div/table/tbody/tr/td/table/tbody/tr[1]/td/table/tbody/tr/td/table/tbody/tr[9]/td[3]/table/tbody/tr/td");
         WebElement actual_resultt = waitQA.until(ExpectedConditions.visibilityOfElementLocated(actual_result));
         String actual__result = actual_resultt.getText();
         System.out.println(actual_resultt);
-        Assert.assertEquals(actual__result , expected_result , "التقرير المطلوب غير متوفر");
+        Assert.assertEquals(actual__result, expected_result, "التقرير المطلوب غير متوفر");
 
     }
 }

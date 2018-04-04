@@ -24,21 +24,5 @@
 
     </test>
 
-    <test name="الباحثون القانونيون">
-
-        <classes>
-            <class name="NoorProject.Other.NoorLogin">
-                <methods>
-                    <include name="EmisadminUser"/>
-                </methods>
-            </class>
-            <class name="NoorProject.EMISAdmin.UsersMenu.LegalResearchers.LegalResearchers"/>
-            <class name="NoorProject.Other.NoorLogOut"/>
-
-
-        </classes>
-
-    </test>
-
 
 </suite>

@@ -44,7 +44,7 @@ public class SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLea
         WebElement drop_down_list_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(drop_down_list_Locator));
         drop_down_list_Locator_wait.click();
         WebElement txt_field_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_field_Locator));
-        txt_field_Locator_wait.sendKeys("SeleniumTestDon'tDelete" , Keys.ENTER);
+        txt_field_Locator_wait.sendKeys("abdullah" , Keys.ENTER);
         Thread.sleep(300);
         WebElement btn_search_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(btn_search_Locator));
         btn_search_Locator_wait.click();

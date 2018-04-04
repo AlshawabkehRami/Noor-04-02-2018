@@ -217,6 +217,7 @@ public class DirectorOfDepartmentsInTheMinistry {
 
         WebElement DDlCityLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlCityLocator));
         DDlCityLocatorWait.click();
+        Thread.sleep(200);
         browserQA.findElement(DDlCitySearchLocator).sendKeys("محافظة الرياض 1" , Keys.ENTER);
 
         Thread.sleep(1000);
