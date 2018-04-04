@@ -39,7 +39,7 @@ public class DeleteSectionsOfTheForm {
 
         WebElement UserLabelLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UserNameLabelLocator));
         UserLabelLocatorWait.click();
-        for (int i = 0; i < 20; i++) {
+     //   for (int i = 0; i < 20; i++) {
             WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
             FormMainMenuLoactorWait.click();
 
@@ -80,7 +80,7 @@ public class DeleteSectionsOfTheForm {
             Assert.assertEquals(ActualResult , ExpectedResult , "لايمكن الحذف للقسم");
 
 
-        }
+     //   }
 
 
     }

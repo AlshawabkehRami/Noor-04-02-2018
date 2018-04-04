@@ -38,7 +38,7 @@ public class AddSectionsOfTheForm {
         WebElement UserLabelLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UserNameLabelLocator));
         UserLabelLocatorWait.click();
 
-        for (int i = 0; i < 20; i++) {
+     //   for (int i = 0; i < 20; i++) {
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
@@ -161,7 +161,7 @@ public class AddSectionsOfTheForm {
             String ExcpectedResult = "تم إضافة القسم بنجاح.";
 
             Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية اضافة القسم بنجاح");
-        }
+       // }
         }
 
 
